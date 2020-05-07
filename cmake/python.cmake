@@ -95,7 +95,9 @@ add_custom_target(python_package ALL
   WORKING_DIRECTORY python
   )
 
-# Test
+############
+##  Test  ##
+############
 if(BUILD_TESTING)
   # Look for python module virtualenv
   search_python_module(virtualenv)
