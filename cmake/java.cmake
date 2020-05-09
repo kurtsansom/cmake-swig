@@ -44,7 +44,6 @@ set_target_properties(jnicmakeswig PROPERTIES
 # note: macOS is APPLE and also UNIX !
 if(APPLE)
   set_target_properties(jnicmakeswig PROPERTIES
-    SUFFIX ".jnilib"
     INSTALL_RPATH "@loader_path")
 elseif(UNIX)
   set_target_properties(jnicmakeswig PROPERTIES INSTALL_RPATH "$ORIGIN")
