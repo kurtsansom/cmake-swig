@@ -84,7 +84,7 @@ file(GENERATE
 add_custom_command(
   OUTPUT java/${CMAKE_SWIG_JAVA_NATIVE}/pom.xml
   COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SWIG_JAVA_NATIVE}
-  COMMAND ${CMAKE_COMMAND} -E copy $<CONFIG>/pom-native.xml ${CMAKE_SWIG_JAVA_NATIVE}/pom.xml
+  COMMAND ${CMAKE_COMMAND} -E copy ./$<CONFIG>/pom-native.xml ${CMAKE_SWIG_JAVA_NATIVE}/pom.xml
   BYPRODUCTS
   java/${CMAKE_SWIG_JAVA_NATIVE}
   WORKING_DIRECTORY java)
@@ -115,7 +115,7 @@ file(GENERATE
 
 add_custom_command(
   OUTPUT java/${CMAKE_SWIG_JAVA}/pom.xml
-  COMMAND ${CMAKE_COMMAND} -E copy $<CONFIG>/pom-local.xml ${CMAKE_SWIG_JAVA}/pom.xml
+  COMMAND ${CMAKE_COMMAND} -E copy ./$<CONFIG>/pom-local.xml ${CMAKE_SWIG_JAVA}/pom.xml
   BYPRODUCTS
   java/${CMAKE_SWIG_JAVA}
   WORKING_DIRECTORY java)
@@ -146,7 +146,7 @@ if(BUILD_TESTING)
 
   add_custom_command(
     OUTPUT java/${CMAKE_SWIG_JAVA_TEST}/pom.xml
-    COMMAND ${CMAKE_COMMAND} -E copy $<CONFIG>/pom-test.xml ${CMAKE_SWIG_JAVA_TEST}/pom.xml
+    COMMAND ${CMAKE_COMMAND} -E copy ./$<CONFIG>/pom-test.xml ${CMAKE_SWIG_JAVA_TEST}/pom.xml
     BYPRODUCTS
     java/${CMAKE_SWIG_JAVA_TEST}
     WORKING_DIRECTORY java)
